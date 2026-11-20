@@ -236,6 +236,11 @@
   function selectCategory(id) {
     state.cat = id;
     state.filter = 'all';
+    if (state.q) {
+      state.q = '';
+      els.search.value = '';
+      els.searchClear.hidden = true;
+    }
     renderHeader();
     renderTabs();
     renderGuide();
