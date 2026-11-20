@@ -188,6 +188,8 @@ button { font-family: inherit; }
   margin-top: 18px;
 }
 
+.chips[hidden] { display: none; }
+
 .chip {
   appearance: none;
   border: 1px solid var(--line-2);
@@ -835,4 +837,281 @@ button { font-family: inherit; }
 @media print {
   .search, .chips, .howto, .card__more, .modal { display: none !important; }
   .card { break-inside: avoid; box-shadow: none; }
+}
+
+/* ==========================================================================
+   7개 카테고리 확장분 (탭 · 링크 공유 · 읽어 두기 · 준비물 · 예시 · 자주 막히는 부분)
+   ========================================================================== */
+
+:root {
+  --cat-video: #2f5bd7;    --cat-video-bg: #eef3fd;
+  --cat-sns: #bf2f76;      --cat-sns-bg: #fdecf5;
+  --cat-design: #6b4bc9;   --cat-design-bg: #f3effd;
+  --cat-writing: #0f7f74;  --cat-writing-bg: #e9f6f3;
+  --cat-research: #a8660c; --cat-research-bg: #fdf3e4;
+  --cat-study: #3f7a24;    --cat-study-bg: #eff7e9;
+  --cat-team: #3f4b63;     --cat-team-bg: #eef1f7;
+}
+
+/* ---------------------------------------------------------------- hero tools */
+
+.hero__tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  max-width: 880px;
+}
+
+.hero__tools .search {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.sharebtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: none;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  background: var(--surface);
+  color: #4a4e5b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.sharebtn:hover { background: var(--accent-soft); border-color: #c5cdf5; color: var(--accent-ink); }
+.sharebtn svg { width: 15px; height: 15px; flex: none; }
+.sharebtn.is-done { background: #e9f7ee; border-color: #bfe3cb; color: #1c7a41; }
+
+/* ---------------------------------------------------------------- tabs */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 24px 0 0;
+  padding: 2px 2px 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs::-webkit-scrollbar { display: none; }
+.tabs[hidden] { display: none; }
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: #5c6070;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.tab:hover { background: #eff0f6; color: var(--ink); }
+
+.tab[aria-pressed="true"] {
+  background: var(--surface);
+  border-color: var(--line-2);
+  color: var(--ink);
+  box-shadow: 0 2px 10px -6px rgba(24, 30, 78, 0.45);
+}
+
+.tab__label { letter-spacing: -0.012em; }
+.tab__emoji { font-size: 14px; line-height: 1; }
+.tab__count { font-size: 11px; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tab[aria-pressed="true"] .tab__count { color: #6f7484; }
+
+.tab--video[aria-pressed="true"] { color: var(--cat-video); border-color: #cfd9f6; }
+.tab--sns[aria-pressed="true"] { color: var(--cat-sns); border-color: #f2cfe1; }
+.tab--design[aria-pressed="true"] { color: var(--cat-design); border-color: #dcd2f6; }
+.tab--writing[aria-pressed="true"] { color: var(--cat-writing); border-color: #c7e6e1; }
+.tab--research[aria-pressed="true"] { color: var(--cat-research); border-color: #efdcc0; }
+.tab--study[aria-pressed="true"] { color: var(--cat-study); border-color: #d3e6c6; }
+.tab--team[aria-pressed="true"] { color: var(--cat-team); border-color: #d3d9e5; }
+
+/* ---------------------------------------------------------------- category tag */
+
+.tag--cat--video { color: var(--cat-video); background: var(--cat-video-bg); }
+.tag--cat--sns { color: var(--cat-sns); background: var(--cat-sns-bg); }
+.tag--cat--design { color: var(--cat-design); background: var(--cat-design-bg); }
+.tag--cat--writing { color: var(--cat-writing); background: var(--cat-writing-bg); }
+.tag--cat--research { color: var(--cat-research); background: var(--cat-research-bg); }
+.tag--cat--study { color: var(--cat-study); background: var(--cat-study-bg); }
+.tag--cat--team { color: var(--cat-team); background: var(--cat-team-bg); }
+
+/* ---------------------------------------------------------------- guide */
+
+.guide { margin-top: 24px; }
+.guide[hidden] { display: none; }
+
+.guide__box {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0 18px;
+}
+
+.guide__summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.guide__summary::-webkit-details-marker { display: none; }
+.guide__kicker {
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 11px;
+  font-weight: 800;
+}
+.guide__title { font-size: 13.8px; font-weight: 700; color: #343843; letter-spacing: -0.015em; }
+
+.guide__body { padding: 0 0 16px; }
+.guide__text {
+  margin: 0 0 8px;
+  font-size: 13.4px;
+  line-height: 1.74;
+  color: #565a66;
+}
+.guide__text:last-child { margin-bottom: 0; }
+
+.tablewrap { overflow-x: auto; margin: 10px 0 14px; border: 1px solid var(--line); border-radius: 10px; }
+
+.gtable { width: 100%; border-collapse: collapse; font-size: 12.8px; }
+.gtable th,
+.gtable td {
+  padding: 8px 11px;
+  border-bottom: 1px solid #f1f2f7;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+.gtable th { background: #f7f8fc; color: #4a4e5b; font-weight: 700; white-space: nowrap; }
+.gtable tr:last-child td { border-bottom: 0; }
+
+/* ---------------------------------------------------------------- modal extras */
+
+.checks { list-style: none; margin: 0; padding: 0; }
+.checks li {
+  display: flex;
+  gap: 9px;
+  padding: 5px 0;
+  font-size: 13.8px;
+  line-height: 1.7;
+  color: #545863;
+}
+.checks__dot { flex: none; color: #1c7a41; font-weight: 800; font-size: 12px; line-height: 1.9; }
+
+.sample {
+  border: 1px solid #e7e0cf;
+  border-radius: 13px;
+  background: #fffdf7;
+  overflow: hidden;
+}
+
+.sample__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px 9px 15px;
+  background: #faf6ea;
+  border-bottom: 1px solid #efe7d3;
+}
+
+.sample__name { font-size: 12.3px; font-weight: 600; color: #7a6537; min-width: 0; }
+
+.sample__code {
+  margin: 0;
+  padding: 16px 17px 18px;
+  font-family: var(--mono);
+  font-size: 12.6px;
+  line-height: 1.72;
+  color: #2c2a24;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.qa { margin: 0; }
+.qa__q {
+  display: flex;
+  gap: 9px;
+  margin: 13px 0 4px;
+  font-size: 13.8px;
+  font-weight: 700;
+  line-height: 1.65;
+  color: #2f333d;
+}
+.qa__q:first-child { margin-top: 0; }
+.qa__a {
+  display: flex;
+  gap: 9px;
+  margin: 0;
+  font-size: 13.6px;
+  line-height: 1.72;
+  color: #5a5e6a;
+}
+.qa__mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 19px;
+  height: 19px;
+  margin-top: 2px;
+  border-radius: 6px;
+  background: #eceffa;
+  color: #414b6b;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+.qa__mark--a { background: #e9f7ee; color: #1c7a41; }
+
+/* ---------------------------------------------------------------- student view (?only=1) */
+
+body.is-only .tabs,
+body.is-only .howto,
+body.is-only .hero__tools .sharebtn { display: none; }
+
+body.is-only .hero { padding-top: 58px; }
+body.is-only .hero__tools { margin-top: 26px; }
+body.is-only .resultline { margin-top: 26px; }
+
+/* ---------------------------------------------------------------- responsive additions */
+
+@media (max-width: 720px) {
+  .hero__tools { flex-wrap: wrap; margin-top: 24px; }
+  .hero__tools .search { flex: 1 1 100%; max-width: none; }
+  .sharebtn { height: 42px; padding: 0 13px; font-size: 12.3px; border-radius: 11px; }
+  .tabs { margin: 18px -18px 0; padding: 2px 18px 4px; }
+}
+
+@media print {
+  .tabs, .sharebtn, .guide { display: none !important; }
 }
