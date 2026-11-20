@@ -851,6 +851,7 @@ button { font-family: inherit; }
   --cat-research: #a8660c; --cat-research-bg: #fdf3e4;
   --cat-study: #3f7a24;    --cat-study-bg: #eff7e9;
   --cat-team: #3f4b63;     --cat-team-bg: #eef1f7;
+  --cat-google: #b3261e;   --cat-google-bg: #fdecea;
 }
 
 /* ---------------------------------------------------------------- hero tools */
@@ -948,6 +949,7 @@ button { font-family: inherit; }
 .tab--research[aria-pressed="true"] { color: var(--cat-research); border-color: #efdcc0; }
 .tab--study[aria-pressed="true"] { color: var(--cat-study); border-color: #d3e6c6; }
 .tab--team[aria-pressed="true"] { color: var(--cat-team); border-color: #d3d9e5; }
+.tab--google[aria-pressed="true"] { color: var(--cat-google); border-color: #f3ccc8; }
 
 /* ---------------------------------------------------------------- category tag */
 
@@ -958,6 +960,7 @@ button { font-family: inherit; }
 .tag--cat--research { color: var(--cat-research); background: var(--cat-research-bg); }
 .tag--cat--study { color: var(--cat-study); background: var(--cat-study-bg); }
 .tag--cat--team { color: var(--cat-team); background: var(--cat-team-bg); }
+.tag--cat--google { color: var(--cat-google); background: var(--cat-google-bg); }
 
 /* ---------------------------------------------------------------- guide */
 

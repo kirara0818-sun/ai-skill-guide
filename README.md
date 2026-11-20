@@ -1,4 +1,4 @@
-# 왕초보 AI 가이드 — 7개 카테고리
+# 왕초보 AI 가이드 — 8개 카테고리
 
 왕초보 AI 강의용 웹페이지입니다. 지금 상황과 닮은 카드를 고르면 **준비물 · 따라 하는 순서 · 실제 입력 예시 · 그대로 복사해서 쓰는 명령어 · 자주 막히는 부분**이 한 번에 열립니다.
 정적 페이지라 서버가 필요 없고, GitHub Pages 주소로 누구에게나 그대로 보낼 수 있습니다.
@@ -6,17 +6,18 @@
 - 라이브: https://kirara0818-sun.github.io/ai-skill-guide/
 - 저장소: https://github.com/kirara0818-sun/ai-skill-guide
 
-## 카테고리 7개 (항목 33개 · 복붙 명령어 51개)
+## 카테고리 8개 (항목 48개 · 복붙 명령어 114개)
 
 | 순서 | 카테고리 | 항목 | 명령어 | 개별 공유 링크 |
 | --- | --- | --- | --- | --- |
-| 1 | 🎬 영상 만들기 | 13 | 19 | `?cat=video&only=1` |
-| 2 | 📱 SNS 키우기 | 3 | 10 | `?cat=sns&only=1` |
+| 1 | 🎬 영상 만들기 | 13 | 29 | `?cat=video&only=1` |
+| 2 | 📱 SNS 키우기 | 3 | 13 | `?cat=sns&only=1` |
 | 3 | 🎨 디자인·PPT | 4 | 6 | `?cat=design&only=1` |
 | 4 | ✍️ 글쓰기·블로그 | 3 | 5 | `?cat=writing&only=1` |
-| 5 | 🌐 자료 조사 | 2 | 2 | `?cat=research&only=1` |
+| 5 | 🌐 자료 조사 | 2 | 4 | `?cat=research&only=1` |
 | 6 | 📚 공부·학습 | 2 | 2 | `?cat=study&only=1` |
 | 7 | 🤖 AI 팀 만들기 | 6 | 7 | `?cat=team&only=1` |
+| 8 | 🧰 구글 AI 툴 15선 | 15 | 48 | `?cat=google&only=1` |
 
 - `?cat=video` — 그 카테고리가 선택된 채로 열립니다. (탭은 그대로 보입니다)
 - `?cat=video&only=1` — **수강생 공유용.** 다른 탭과 검색 도움말이 숨고 그 카테고리만 깔끔하게 보입니다.
@@ -28,7 +29,7 @@
 index.html              화면의 뼈대 (디자인)
 styles.css              색·여백·카드·모달·탭 (디자인)
 app.js                  검색·탭·필터·모달·복사·공유 링크 (동작)
-data/categories.json    카테고리 7개 목록 (탭 이름·순서)
+data/categories.json    카테고리 8개 목록 (탭 이름·순서)
 data/video.json         🎬 영상 만들기 항목
 data/sns.json           📱 SNS 키우기 항목
 data/design.json        🎨 디자인·PPT 항목
@@ -36,6 +37,7 @@ data/writing.json       ✍️ 글쓰기·블로그 항목
 data/research.json      🌐 자료 조사 항목
 data/study.json         📚 공부·학습 항목
 data/team.json          🤖 AI 팀 만들기 항목
+data/google.json        🧰 구글 AI 툴 15선 항목
 README.md               이 문서
 ```
 
@@ -91,7 +93,7 @@ HTML·CSS·JS는 건드릴 필요가 없습니다.
 
 | 키 | 설명 |
 | --- | --- |
-| `id` | 주소에 쓰이는 고유 이름. 영문 소문자와 `-`만. 7개 파일 전체에서 겹치면 안 됩니다. |
+| `id` | 주소에 쓰이는 고유 이름. 영문 소문자와 `-`만. 8개 파일 전체에서 겹치면 안 됩니다. |
 | `cat` | 카테고리 id. 파일의 `category.id`와 같아야 합니다. |
 | `filter` | 그 카테고리의 `filters` 중 하나 (상황별 칩). |
 | `title` | 카드에 보이는 쉬운 한국어 제목 (영어 기능 이름은 쓰지 않습니다) |
@@ -136,4 +138,4 @@ python3 -m http.server 8000
 - 개인·타사 정보를 넣지 않습니다: `@`, 회사·브랜드명, 개인 블로그·채널 이름, 남의 채널 링크, 원문 출처 링크.
 - 제목에는 영어 스킬 이름을 쓰지 않습니다. 실제로 붙여넣어야 하는 이름만 회색 명령어 칸 안에 둡니다.
 - 초등학생도 이해하는 쉬운 한국어로 씁니다.
-- 모든 숫자·명령어는 원본 노션 7개 페이지(`notion/ai-skill-hub/v2/01-video.md` ~ `07-ai-team.md`)와 대조합니다.
+- 모든 숫자·명령어는 원본 노션 7개 페이지(`notion/ai-skill-hub/v2/01-video.md` ~ `07-ai-team.md`)와 대조합니다. 🧰 구글 AI 툴 카테고리만 원본 PDF(`downloads/google_ai_tools_15.pdf`, 7쪽)와 대조합니다.
