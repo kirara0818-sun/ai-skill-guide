@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "왕초보 AI 가이드",
-    "tagline": "왕초보 AI 강의 · 7개 카테고리 · 복붙 프롬프트 51개",
+    "tagline": "왕초보 AI 강의 · 7개 카테고리 · 복붙 프롬프트 66개",
     "lead": "지금 내 상황과 닮은 카드를 고르세요. 따라 하는 순서와 그대로 복사해서 쓰는 명령어가 한 번에 열립니다.",
     "howto": [
       "내 상황과 닮은 카드를 고릅니다",
@@ -19,7 +19,7 @@
       "desc": "얼굴 고정부터 자동 편집, 모션그래픽까지 13개 항목",
       "file": "data/video.json",
       "itemCount": 13,
-      "promptCount": 19
+      "promptCount": 29
     },
     {
       "id": "sns",
@@ -29,7 +29,7 @@
       "desc": "릴스 분석부터 대본·캡션, 유튜브 대본·제목·쇼츠까지 3개 항목",
       "file": "data/sns.json",
       "itemCount": 3,
-      "promptCount": 10
+      "promptCount": 13
     },
     {
       "id": "design",
@@ -59,7 +59,7 @@
       "desc": "출처 있는 자료 조사와 휴대폰 화면 점검, 2개 항목",
       "file": "data/research.json",
       "itemCount": 2,
-      "promptCount": 2
+      "promptCount": 4
     },
     {
       "id": "study",
