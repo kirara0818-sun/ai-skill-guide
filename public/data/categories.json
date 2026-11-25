@@ -1,0 +1,95 @@
+{
+  "site": {
+    "title": "왕초보 AI 가이드",
+    "tagline": "왕초보 AI 강의 · 8개 카테고리 · 복붙 프롬프트 114개",
+    "lead": "지금 내 상황과 닮은 카드를 고르세요. 따라 하는 순서와 그대로 복사해서 쓰는 명령어가 한 번에 열립니다.",
+    "howto": [
+      "내 상황과 닮은 카드를 고릅니다",
+      "1·2·3 순서대로 따라 합니다",
+      "명령어를 복사해 [ ] 안만 바꿉니다"
+    ],
+    "foot": "시간이 없으면 영상 만들기의 얼굴 고정과 자동 편집만 해 봐도 충분합니다. 결과가 마음에 안 들면 한 가지만 다시 부탁해 보세요."
+  },
+  "categories": [
+    {
+      "id": "video",
+      "emoji": "🎬",
+      "title": "영상 만들기",
+      "nav": "영상 만들기",
+      "desc": "얼굴 고정부터 자동 편집, 모션그래픽까지 13개 항목",
+      "file": "data/video.json",
+      "itemCount": 13,
+      "promptCount": 29
+    },
+    {
+      "id": "sns",
+      "emoji": "📱",
+      "title": "인스타그램·유튜브 키우기",
+      "nav": "SNS 키우기",
+      "desc": "릴스 분석부터 대본·캡션, 유튜브 대본·제목·쇼츠까지 3개 항목",
+      "file": "data/sns.json",
+      "itemCount": 3,
+      "promptCount": 13
+    },
+    {
+      "id": "design",
+      "emoji": "🎨",
+      "title": "카드뉴스·발표자료(PPT) 만들기",
+      "nav": "디자인·PPT",
+      "desc": "썸네일·카드뉴스·포스터부터 발표 자료·웹페이지까지 4개 항목",
+      "file": "data/design.json",
+      "itemCount": 4,
+      "promptCount": 6
+    },
+    {
+      "id": "writing",
+      "emoji": "✍️",
+      "title": "블로그 글쓰기·문장 다듬기",
+      "nav": "글쓰기·블로그",
+      "desc": "검색에 걸리는 글쓰기부터 AI 티 지우기까지 3개 항목",
+      "file": "data/writing.json",
+      "itemCount": 3,
+      "promptCount": 5
+    },
+    {
+      "id": "research",
+      "emoji": "🌐",
+      "title": "인터넷 자료 조사·웹 화면 확인",
+      "nav": "자료 조사",
+      "desc": "출처 있는 자료 조사와 휴대폰 화면 점검, 2개 항목",
+      "file": "data/research.json",
+      "itemCount": 2,
+      "promptCount": 4
+    },
+    {
+      "id": "study",
+      "emoji": "📚",
+      "title": "공부·개념 쉽게 이해하기",
+      "nav": "공부·학습",
+      "desc": "그림·비유·퀴즈로 설명을 바꾸는 2개 항목",
+      "file": "data/study.json",
+      "itemCount": 2,
+      "promptCount": 2
+    },
+    {
+      "id": "team",
+      "emoji": "🤖",
+      "title": "나만의 AI 팀 만들기",
+      "nav": "AI 팀 만들기",
+      "desc": "노션 사무실 하나로 여러 AI에게 일을 나눠 맡기는 6개 항목",
+      "file": "data/team.json",
+      "itemCount": 6,
+      "promptCount": 7
+    },
+    {
+      "id": "google",
+      "emoji": "🧰",
+      "title": "구글 AI 툴 15선",
+      "nav": "구글 AI 툴",
+      "desc": "마케팅·페이지·자동화·자료·이미지·개발, 구글 AI 툴 15가지",
+      "file": "data/google.json",
+      "itemCount": 15,
+      "promptCount": 48
+    }
+  ]
+}
